@@ -1,0 +1,46 @@
+{
+  "name": "Wen Mang",
+  "manifest_version": 2,
+  "version": "0.1",
+  "description": "Plays audio of selected Chinese text",
+
+  "browser_action": {
+    "default_icon": "support-128.png",
+    "default_title": "Wen Mang - Play audio of selected text!"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts":[
+    {
+      "matches": ["<all_urls>"],
+      "js": ["responsivevoice.js"],
+      "css": ["styles.css"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+
+  "icons": {
+    "128": "support-128.png"
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+K",
+        "mac": "Command+K",
+        "chromeos": "Ctrl+K",
+        "linux": "Ctrl+K"
+        }
+     }
+  },
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+
+}
