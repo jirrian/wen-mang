@@ -1,7 +1,7 @@
 {
   "name": "Wen Mang",
   "manifest_version": 2,
-  "version": "0.1",
+  "version": "0.2",
   "description": "Plays audio of selected Chinese text",
 
   "browser_action": {
@@ -29,16 +29,6 @@
     "128": "support-128.png"
   },
 
-  "commands": {
-    "_execute_browser_action": {
-      "suggested_key": {
-        "windows": "Ctrl+K",
-        "mac": "Command+K",
-        "chromeos": "Ctrl+K",
-        "linux": "Ctrl+K"
-        }
-     }
-  },
 
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 
